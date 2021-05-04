@@ -3,7 +3,7 @@ import socket
 HOST = "irc.twitch.tv"
 PORT = 6667
 NICK =input("what channel to send this message to : ")
-PASS = 'oauth:el6nkk6rnfoodagsm5hak0x8llxo5y'
+PASS = 'oauth:i6abf3vrikxva3vllaiyx2ki5mxvym'
 
 def send_message(message):
     s.send(bytes("PRIVMSG #" + NICK + " :" + message + "\r\n", "UTF-8"))
@@ -23,5 +23,6 @@ choices=[
 ]
 
 
-m=int(input('from 0 to 3 : '))
-send_message(choices[m])
+m=int(input('from 0 to 4 : '))
+if send_message(choices[m]) :
+    print("done")
